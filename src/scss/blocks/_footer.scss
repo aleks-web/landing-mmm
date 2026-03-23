@@ -1,0 +1,164 @@
+@use "../fonts/Montserrat";
+@use "../utils";
+
+.footer {
+  --gap: 40px;
+  @include Montserrat.setFont(14px, 400);
+  color: #464646;
+
+  @include utils.from('sm') {
+    font-size: 16px;
+  }
+
+  @include utils.from('xl') {
+    margin-top: 50px;
+  }
+
+  &__container {
+    display: flex;
+    flex-direction: column;
+    gap: var(--gap);
+    padding-top: var(--gap);
+    padding-bottom: var(--gap);
+    overflow: hidden;
+
+    @include utils.from('md') {
+      padding-top: 70px;
+      padding-bottom: 70px;
+    }
+  }
+
+  &__text {
+    font-weight: 400;
+    text-align: center;
+
+    @include utils.from('sm') {
+      text-align: left;
+    }
+
+    @include utils.from('md') {
+      font-weight: 500;
+    }
+  }
+
+  &__info {
+    display: flex;
+    flex-direction: column;
+    gap: var(--gap);
+    margin-left: auto;
+
+    @include utils.from('sm') {
+      gap: 10px;
+    }
+
+    @include utils.from('md') {
+      flex-direction: row;
+      gap: 40px;
+    }
+  }
+
+  &__menu {
+    display: none;
+    align-items: center;
+    list-style: none;
+    gap: 30px;
+
+    @include utils.from('xl') {
+      display: flex;
+    }
+
+    a {
+      text-decoration: unset;
+      color: inherit;
+      transition: .2s all;
+
+      &:hover {
+        color: var(--main-color);
+      }
+    }
+  }
+
+  &__politic {
+    color: #2146CE;
+    transition: .2s all;
+
+    &:hover {
+      color: #D92626;
+    }
+  }
+
+  &__line-2 {
+    text-align: center;
+    display: flex;
+    flex-direction: column-reverse;
+    gap: var(--gap);
+    align-items: center;
+
+    @include utils.from('sm') {
+      text-align: left;
+      flex-direction: row;
+      justify-content: space-between;
+    }
+
+    &-text {
+      display: flex;
+      flex-direction: column;
+      gap: 5px;
+      max-width: 450px;
+      font-size: 15px;
+      font-weight: 500;
+    }
+
+    &-right {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      text-align: center;
+      gap: 7px;
+
+      @include utils.from('sm') {
+        align-items: flex-start;
+        text-align: left;
+      }
+    }
+
+    &-tel {
+      font-size: 20px;
+      text-decoration: auto;
+      font-weight: 600;
+      color: #464646;
+      max-width: max-content;
+      transition: .2s all;
+
+      @include utils.from('md') {
+        font-size: 24px;
+      }
+
+      @include utils.from('lg') {
+        font-size: 26px;
+      }
+
+      &:hover {
+        color: #D92626;
+      }
+    }
+
+    &-bottom {
+      display: flex;
+      flex-direction: column;
+      margin-top: 10px;
+    }
+  }
+
+  &__line-3 {
+    color: #464646;
+    @include Montserrat.setFont(17px, 400);
+    text-align: center;
+    font-weight: 400;
+
+    @include utils.from('md') {
+      font-size: 19px;
+    }
+  }
+}
