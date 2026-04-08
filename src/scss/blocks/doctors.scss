@@ -1,0 +1,191 @@
+@use "../utils";
+
+.doctors {
+
+}
+
+.doctor {
+  padding: 10px;
+  border: 1px solid #aab7c6;
+  border-radius: 24px;
+
+  &__container {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+
+    @include utils.from('s') {
+      flex-direction: row;
+    }
+  }
+
+  &__line {
+    color: #5E5E5E;
+
+    b {
+      color: #2D2D2D;
+    }
+
+    &-1 {
+      margin-bottom: 10px;
+    }
+  }
+
+  &__name {
+    color: #161616;
+    font-weight: 500;
+    font-size: 20px;
+
+    @include utils.from('sm') {
+      font-size: 24px;
+    }
+  }
+
+  &__stage {
+    font-size: 18px;
+    font-weight: 700;
+    color: #3E494A;
+
+    @include utils.from('s') {
+      font-size: 14px;
+      line-height: 14px;
+      text-align: center;
+    }
+
+    @include utils.from('sm') {
+      font-size: 18px;
+      line-height: 26px;
+    }
+  }
+
+  &__avatar {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    width: 100%;
+
+    @include utils.from('s') {
+      max-width: 150px;
+      min-width: 50px;
+    }
+
+    img {
+      border-radius: 10px;
+      overflow: hidden;
+    }
+  }
+
+  &__content {
+    background-color: #F2F4F5;
+    border-radius: 24px;
+    padding: 25px 20px;
+    width: 100%;
+
+    &:hover {
+      .doctor__wrap {
+        transform: scale(0.99);
+      }
+    }
+  }
+
+  &__wrap {
+    transition: .2s all;
+    width: 100%;
+  }
+
+  &__post {
+    color: var(--main-color);
+    font-size: 16px;
+    font-weight: 700;
+    margin-bottom: 20px;
+
+    @include utils.from('sm') {
+      font-size: 18px;
+    }
+  }
+
+  &__header {
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+  }
+
+  &__info {
+    background-color: white;
+    color: #3E494A;
+    padding: 11px 15px;
+    border-radius: 10px;
+    margin-top: 20px;
+  }
+
+  &__btn {
+    height: 44px;
+    border: none;
+    border-radius: 50px;
+    padding: 0 15px;
+    font-size: 14px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+
+    svg {
+      margin-top: 1px;
+    }
+
+    @include utils.from('s') {
+      font-size: 16px;
+    }
+  }
+
+  &__btns {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    margin-top: 30px;
+  }
+
+  &__btn-more {
+    background-color: #C4E5F3;
+    color: #486774;
+    font-weight: 700;
+  }
+
+  &__btn-order {
+    position: relative;
+    color: white;
+    font-weight: 500;
+    background: linear-gradient(135deg, #006067 0%, #007B83 100%);
+    overflow: hidden;
+
+    svg {
+      transition: .2s all;
+      z-index: 1;
+    }
+
+    span {
+      z-index: 1;
+    }
+
+    &:hover svg {
+      transform: translateX(3px);
+    }
+
+    &:hover:before {
+      opacity: 0.2;
+    }
+
+    &:before {
+      content: '';
+      position: absolute;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      top: 0;
+      background-color: black;
+      z-index: 0;
+      opacity: 0;
+      transition: .2s all;
+    }
+  }
+}

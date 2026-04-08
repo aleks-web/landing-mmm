@@ -1,4 +1,4 @@
-@use "fonts/Montserrat";
+@use "fonts/Manrope";
 @use "utils";
 
 .loading {
@@ -9,7 +9,7 @@
   padding: 10px;
   overflow: hidden;
   width: 100%;
-  @include Montserrat.setFont(24px, 500);
+  @include Manrope.setFont(24px, 500);
 }
 
 .modal-wrapper--loading {
@@ -322,11 +322,11 @@
   }
 
   &__left {
-    @include Montserrat.setFont(14px, 300);
+    @include Manrope.setFont(14px, 300);
   }
 
   &__right {
-    @include Montserrat.setFont(14px, 300);
+    @include Manrope.setFont(14px, 300);
     display: flex;
     flex-direction: column;
     gap: 5px;

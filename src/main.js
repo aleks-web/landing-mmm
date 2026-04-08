@@ -1,10 +1,10 @@
 import sender from "./assets/js/sender.js";
 import "./assets/js/utils.js";
-import "./assets/js/quiz.js";
 import "./assets/js/modals.js";
 import "./scss/index.scss";
 import "./assets/js/masks.js";
 import "./assets/js/last-day.js";
+import "./assets/js/components/select.js";
 
 document.addEventListener('DOMContentLoaded', () => {
 

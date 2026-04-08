@@ -1,7 +1,13 @@
+@use 'fonts/Manrope';
+
 * {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
+}
+
+body {
+  @include Manrope.setFont(16px);
 }
 
 img {

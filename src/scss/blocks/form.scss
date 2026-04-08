@@ -1,0 +1,126 @@
+@use "../utils";
+
+.form-b {
+  &__container {
+    margin-bottom: 40px;
+    margin-top: 30px;
+
+    @include utils.from('sm') {
+      margin-bottom: 60px;
+    }
+  }
+
+  &__wrap {
+    background-color: #007B83;
+    border-radius: 24px;
+    padding: 30px 20px;
+
+    @include utils.from('sm') {
+      padding: 50px 20px;
+    }
+
+    @include utils.from('md') {
+      padding: 70px 20px;
+    }
+
+    @include utils.from('lg') {
+      padding: 80px 20px;
+    }
+
+    @include utils.from('xl') {
+      padding: 90px 20px;
+    }
+  }
+
+  &__title,
+  &__desc {
+    color: #D0FBFF;
+    text-align: center;
+  }
+
+  &__title {
+    font-size: 24px;
+    font-weight: 400;
+    line-height: 24px;
+
+    @include utils.from('s') {
+      font-size: 26px;
+      line-height: 26px;
+    }
+
+    @include utils.from('sm') {
+      font-size: 32px;
+      line-height: 36px;
+    }
+
+    @include utils.from('lg') {
+      font-size: 36px;
+    }
+  }
+
+  &__desc {
+    margin: 0 auto;
+    max-width: 500px;
+  }
+
+  &__header {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    margin-bottom: 20px;
+
+    @include utils.from('s') {
+      gap: 20px;
+    }
+  }
+
+  &__btn {
+    background-color: white;
+    border-radius: 50px;
+    padding: 15px 25px;
+    border: none;
+    color: var(--main-color);
+    font-weight: 700;
+    font-size: 16px;
+
+    @include utils.from('sm') {
+      min-width: 210px;
+    }
+
+    @include utils.from('lg') {
+      font-size: 18px;
+    }
+  }
+
+  &__phone {
+    padding: 15px 25px;
+    border-radius: 50px;
+    outline: none;
+    border: none;
+    background: rgba(255, 255, 255, 0.24);
+    color: white;
+
+    &::placeholder {
+      color: #acd2d2;
+    }
+
+    @include utils.from('sm') {
+      min-width: 280px;
+    }
+
+    @include utils.from('md') {
+      min-width: 380px;
+    }
+  }
+
+  form {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+
+    @include utils.from('sm') {
+      flex-direction: row;
+      justify-content: center;
+    }
+  }
+}

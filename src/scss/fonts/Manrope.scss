@@ -1,0 +1,11 @@
+@font-face {
+  src: url("/src/assets/fonts/Manrope.ttf");
+  font-family: "Manrope";
+  font-display: swap;
+}
+
+@mixin setFont($size: 14px, $weight: 400) {
+  font-family: "Manrope", sans-serif;
+  font-weight: $weight;
+  font-size: $size;
+}

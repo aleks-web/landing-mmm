@@ -5,469 +5,162 @@
     <meta charset="UTF-8" />
     <link rel="icon" type="image/svg+xml" href="/favicon.png" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Протезирование зубов в Тюмени по самым выгодным ценам</title>
+    <title>Экспертный журнал о стоматологах</title>
   </head>
 
   <body>
-    <div class="socials">
-      <div class="social">
-        <a href="https://max.ru/u/f9LHodD0cOLO_ZwcPhCFcW2xohJWsWLJ0Oz3n8jd2POpGKwY6nZWtR-h2W8">
-          <img alt="Max" src="./src/assets/images/max.webp">
-        </a>
+
+    <div class="hero">
+
+        <div class="hero__logo hero-container">
+          <img class="hero__logo-img" src="./src/assets/images/logo.svg" alt="logo">
+          <div class="hero__logo-desc">Экспертный журнал о стоматологах</div>
+        </div>
+
+        <div class="hero-container">
+          <div class="hero__items">
+            <div class="hero__item hero__item-1">
+              <div class="hero__item-num">25 000</div>
+              <div class="hero__item-pos">Посетителей в месяц</div>
+              <img src="./src/assets/images/calls.webp" alt="calls">
+            </div>
+            <div class="hero__item hero__item-2">
+              <div class="hero__item-num">15 000</div>
+              <div class="hero__item-pos">Записей на приём</div>
+              <img src="./src/assets/images/gav.webp" alt="gav">
+            </div>
+          </div>
+        </div>
+
+        <div class="hero-container">
+          <div class="hero-utp">
+              <div class="hero-utp__container">
+                  <div class="hero-utp__ppl">
+                    <div class="hero-utp__plate">Найдите своего врача с гарантией качества</div>
+                    <img src="./src/assets/images/ppl.webp" alt="hero-utp-ppl">
+                  </div>
+                  <img class="hero-utp__img" src="./src/assets/images/hero-utp.webp" alt="hero-utp-image">
+
+                  <div class="hero-utp__wrap">
+                    <h2 class="hero-utp__title">Номинация «Лучший ортопед»</h2>
+                    <div class="hero-utp__desc">по мнению независимого агентства экспертизы и консалтинга «МедЭкспертКонсалт»</div>
+
+                    <div class="hero-select hero-utp__select">
+                      <div class="hero-select__current default">
+                        <span>Выбрать номинацию</span>
+                        <svg width="12" height="7" viewBox="0 0 12 7" fill="none" xmlns="http://www.w3.org/2000/svg">
+                          <path d="M0.833374 0.835938L5.83337 5.83594L10.8334 0.835938" stroke="#667085" stroke-width="1.66667" stroke-linecap="round" stroke-linejoin="round"/>
+                        </svg>
+                      </div>
+
+                      <ul class="hero-select__list">
+                        <li class="active"><span>Лучший стоматолог-хирург</span></li>
+                        <li><span>Лучший стоматолог-ортопед</span></li>
+                        <li><span>Лучший стоматолог-гигиенист</span></li>
+                        <li><span>Лучший стоматолог общей практики</span></li>
+                      </ul>
+                    </div>
+                  </div>
+              </div>
+
+          </div>
+        </div>
+
+    </div>
+
+    <div class="form-b">
+      <div class="form-b__container container">
+        <div class="form-b__wrap">
+          <div class="form-b__header">
+            <h2 class="form-b__title">Подберем врача и запишем на прием</h2>
+            <div class="form-b__desc">Оставьте номер телефона, и мы свяжемся с вами, чтобы ответить на вопросы, помочь выбрать специалиста и подобрать удобное время визита.</div>
+          </div>
+
+          <form action="#">
+            <input class="form-b__phone" type="text" placeholder="+7 (___)-___-__-__" data-mask-phone />
+            <button class="form-b__btn">Отправить заявку</button>
+          </form>
+        </div>
       </div>
     </div>
 
-    <div class="content">
-      <header class="header-m">
-        <div class="container">
+    <div class="doctors">
+      <div class="doctors__container container">
 
-          <div class="header-m__mobile">
-            <div class="header-m__logo">
-              <img src="/src/assets/images/logo.png" alt="Adenta">
+        <div class="doctor">
+
+          <div class="doctor__container">
+            <div class="doctor__avatar">
+              <img src="./src/assets/images/modals/mans/man-1.webp" alt="man 1">
+              <span class="doctor__stage">Опыт работы 7 лет</span>
             </div>
 
-            <a href="tel:+73452608247" class="header-m__call-button">
-              <img src="/src/assets/images/svg/call-header.svg" alt="Header">
-            </a>
-          </div>
-
-        </div>
-      </header>
-      <header class="header-d" style="display: none;">
-        <div class="container header-d__container">
-          <div class="header-d__top">
-            <div class="header-d__logo">
-              <img src="./src/assets/images/logo.png" alt="Logo Desktop">
-            </div>
-
-            <div class="header-d__top-item header-d__city">
-              <img class="header-d__top-item-icon" src="./src/assets/images/svg/geo.svg" alt="Alt">
-              <div class="header-d__top-item-text">
-                <span>ул. Республики д. 14/7</span>
-                <span>ул. Челюскинцев д. 29</span>
-                <span>ул. Широтная д. 108 к4</span>
-              </div>
-            </div>
-
-            <div class="header-d__top-item header-d__work">
-              <img class="header-d__top-item-icon" src="./src/assets/images/svg/clock.svg" alt="Alt">
-              <div class="header-d__top-item-text">
-                <span>Сейчас работаем</span>
-              </div>
-            </div>
-
-            <div class="header-d__top-item header-d__phone">
-              <a href="tel:+73452608247">+7 (3452) 608-247</a>
-            </div>
-
-          </div>
-        </div>
-      </header>
-
-      <div class="hero-m">
-        <div class="hero-m__container container">
-
-          <div class="hero-m__wrap">
-            <div class="hero-m__left">
-              <div class="hero-m__title">ИМПЛАНТ<br>за 19 900₽</div>
-
-              <div class="hero-m__desc">
-                <span>Osstem</span>
-                <span>с установкой</span>
-              </div>
-
-              <div class="hero-m__info">
-                <div class="hero-m__info-text">вместо <strike>39 600₽</strike></div>
-                <div class="hero-m__info-small">успейте по лучшей цене до <span data-last-day>31 марта</span></div>
-              </div>
-            </div>
-
-            <div class="hero-m__right">
-              <div class="hero-m__doctor">
-                <img class="hero-m__doctor-img" src="./src/assets/images/doctor.webp" alt="doctor">
-                <div class="hero-m__doctor-info">
-                  <span>Овсепян Нарек Андраникович</span>
-                  <span>Главный врач, стаж 9 лет</span>
+            <div class="doctor__content">
+              <div class="doctor__wrap">
+                <div class="doctor__header">
+                  <div class="doctor__name">Иванов Павел Вячеславович</div>
+                  <div class="doctor__post">Стоматолог-ортопед</div>
+                  <div class="doctor__line doctor__line-1">Более <b>1 850 процедур за прошлый год</b></div>
+                  <div class="doctor__line doctor__line-2">Более <b>520 довольных пациентов</b></div>
+                </div>
+                <div class="doctor__info">
+                  Специализируется на восстановлении утраченных и разрушенных зубов, эстетической реставрации и функциональной реабилитации. Подбирает решения, которые выглядят естественно и служат долгие годы.
                 </div>
               </div>
             </div>
+
           </div>
 
-          <div class="hero-m__utps">
-            <div class="h-utp">
-              <img class="h-utp__icon" src="./src/assets/images/utp/clock.png" alt="clock">
-              <div class="h-utp__title">Установка за 60 минут</div>
-            </div>
-
-            <div class="h-utp">
-              <img class="h-utp__icon" src="./src/assets/images/utp/zub.png" alt="zub">
-              <div class="h-utp__title">100% качество</div>
-            </div>
-
-            <div class="h-utp">
-              <img class="h-utp__icon" src="./src/assets/images/utp/shield.png" alt="shield">
-              <div class="h-utp__title">Зуб «под ключ» - в<br>рассрочку на год без %</div>
-            </div>
+          <div class="doctor__btns">
+            <button class="doctor__btn doctor__btn-more">Подробнее о специалисте</button>
+            <button class="doctor__btn doctor__btn-order">
+              <span>Записаться</span>
+              <svg width="18" height="8" viewBox="0 0 18 8" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path d="M13.8333 0.5L17.1667 3.83333M17.1667 3.83333L13.8333 7.16667M17.1667 3.83333H0.5" stroke="white" stroke-linecap="round" stroke-linejoin="round"/>
+              </svg>
+            </button>
           </div>
-
-          <div class="hero-m__doctor-bottom">
-            <div class="hero-m__doctor">
-              <img class="hero-m__doctor-img" src="./src/assets/images/doctor.webp" alt="doctor">
-              <div class="hero-m__doctor-info">
-                <span>Овсепян Нарек Андраникович</span>
-                <span>Главный врач, стаж 9 лет</span>
-              </div>
-            </div>
-
-            <button class="hero-m__btn-order" onclick="((e) => { e.preventDefault(); openModal('.modal-call') })(event)">Забронировать цену</button>
-          </div>
-
-
         </div>
+
       </div>
+    </div>
 
-      <div class="hero-d">
-        <div class="hero-d__container container">
+    <footer class="footer" id="contacts">
+      <div class="container footer__container">
+        <div class="footer__wrap">
 
-          <div class="hero-d__left">
-            <div class="hero-d__title">ИМПЛАНТ<br>за 19 900₽</div>
-            <div class="hero-d__desc">
-              <span>Osstem</span>
-              <span>с установкой</span>
-            </div>
-            <div class="hero-d__info">
-              <span>вместо <strike>39 600₽</strike></span>
-              <span>успейте по лучшей цене до <span data-last-day>31 марта</span></span>
-            </div>
-            <div class="hero-d__btn-order" onclick="((e) => { e.preventDefault(); openModal('.modal-call') })(event)">Забронировать цену</div>
-          </div>
-
-          <div class="hero-d__right">
-
-            <div class="hero-d__doctor">
-              <img src="./src/assets/images/doctor.webp" alt="doctor">
-
-              <div class="h-utp h-utp--1">
-                <img class="h-utp__icon" src="./src/assets/images/utp/shield.png" alt="shield">
-                <div class="h-utp__title">Зуб «под ключ» - в рассрочку на год без %</div>
-              </div>
-
-              <div class="h-utp h-utp--2">
-                <img class="h-utp__icon" src="./src/assets/images/utp/zub.png" alt="zub">
-                <div class="h-utp__title">100%<br>качество</div>
-              </div>
-
-              <div class="h-utp h-utp--3">
-                <img class="h-utp__icon" src="./src/assets/images/utp/clock.png" alt="clock">
-                <div class="h-utp__title">Установка за<br>60 минут</div>
-              </div>
-
-              <div>
-                <img class="h-utp__line h-utp__line--1" src="./src/assets/images/line.webp" alt="line 1">
-                <img class="h-utp__line h-utp__line--2" src="./src/assets/images/line.webp" alt="line 2">
-                <img class="h-utp__line h-utp__line--3" src="./src/assets/images/line.webp" alt="line 3">
-              </div>
-
-              <div class="hero-d__doctor-info">
-                <span>Овсепян Нарек Андраникович</span>
-                <span>Главный врач, стаж 9 лет</span>
-              </div>
+          <div class="footer__block">
+            <div class="footer__logo">
+              <img src="./src/assets/images/logo.svg" alt="logo">
+              <span>Сервис подбора врачей, где точность медицины сочетается с заботой о пациентах.</span>
             </div>
 
-          </div>
-
-        </div>
-      </div>
-
-      <div class="discount">
-        <div class="discount__container container">
-          <div class="discount__wrap">
-            <span class="discount__text">Пенсионерам скидки до 50%</span>
-          </div>
-        </div>
-      </div>
-
-      <div class="q" id="corob">
-
-        <div class="q__container container">
-          <div class="q__left">
-            <div class="q__title">
-              <span>Рассчитать стоимость лечения</span>
-              <span>за 1 минуту <span>+ получить подарок!</span></span>
-            </div>
-
-            <div class="q__corob">
-              <img class="q__corob-img" src="./src/assets/images/gift.png" alt="gift">
-              <img class="q__corob-arrow" src="./src/assets/images/gift-arrow.png" alt="arrow">
-              <div class="q__corob-text">До <span data-last-day>31 марта</span></div>
-            </div>
-
-            <div class="q__desc">
-              <span>После прохождения квиза вы получите скидку на имплантацию</span>
-              <div class="q__desc-bold">
-                <span>50%</span>
-                <span>+ бесплатное удаление и запись на бесплатную консультацию</span>
-              </div>
+            <div class="footer__links">
+              <span>Юридическая информация</span>
+              <ul>
+                <li><a href="politic.pdf">Куки и Политика конфиденциальности</a></li>
+                <li><a href="politic.pdf">Условия обслуживания</a></li>
+                <li><a href="politic.pdf">Настройки куки</a></li>
+              </ul>
             </div>
           </div>
 
-          <div class="q__right">
-            <div class="q__q">
-
-              <div class="q__q-count"><span class="q__q-count-now">1</span><span>/</span><span class="q__q-count-full">4</span></div>
-
-              <div class="q__progress"></div>
-
-              <div class="q__q-title"></div>
-
-              <div class="q__steps">
-                <div class="q__step step-1 active" data-step-options='{"step_id": "1", "type": "radio", "question": "На какой челюсти хотите поставить импланты?"}'>
-
-                  <ul>
-                    <li data-value="На верхней челюсти">
-                      <div class="cb"></div>
-                      <span>На верхней челюсти</span>
-                    </li>
-                    <li data-value="На нижней челюсти">
-                      <div class="cb"></div>
-                      <span>На нижней челюсти</span>
-                    </li>
-                    <li data-value="На обе челюсти">
-                      <div class="cb"></div>
-                      <span>На обе челюсти</span>
-                    </li>
-                  </ul>
-                </div>
-
-                <div class="q__step step-2" data-step-options='{"step_id": "2", "type": "radio", "question": "Сколько проблемных зубов?"}'>
-                  <ul>
-                    <li data-value="1-2"><div class="cb"></div>1-2</li>
-                    <li data-value="3-5"><div class="cb"></div>3-5</li>
-                    <li data-value="6-8"><div class="cb"></div>6-8</li>
-                  </ul>
-                </div>
-
-                <div class="q__step step-3" data-step-options='{"step_id": "3", "type": "radio", "question": "Как долго присутствует проблема с зубами?"}'>
-                  <ul>
-                    <li data-value="Меньше 6 месяцев"><div class="cb"></div>Меньше 6 месяцев</li>
-                    <li data-value="От 6 месяцев до 2 лет"><div class="cb"></div>От 6 месяцев до 2 лет</li>
-                    <li data-value="От 2 до 5 лет"><div class="cb"></div>От 2 до 5 лет</li>
-                  </ul>
-                </div>
-
-                <div class="q__step step-4" data-step-options='{"step_id": "4", "type": "radio", "question": "Куда Вам отправить расчёт стоимости по имплантации зубов?"}'>
-                  <div>
-                    <ul>
-                      <li data-value="Telegram"><div class="cb"></div>Telegram</li>
-                      <li data-value="Max"><div class="cb"></div>Max</li>
-                      <li data-value="Бесплатная консультация по телефону"><div class="cb"></div>Бесплатная консультация по телефону</li>
-                    </ul>
-                  </div>
-                </div>
-
-                <div class="q__step step-5" data-step-options='{ "step_id": "5", "type": "radio", "question": "Ваш расчет готов!", "hide_elements": [".q__q-count", ".q__progress", ".q__btn-prev"] }'>
-
-                  <div class="step-5__desc">Оставьте ваш телефон, и мы пришлем вам:</div>
-
-                  <ul>
-                    <li>3 варианта точной сметы</li>
-                    <li>Именной план лечения с рекомендациями от ведущего имплантолога клиники</li>
-                    <li>Специальный Купон на бесплатный 3D-снимок</li>
-                    <li>Мы не будем навязывать дорогие услуги</li>
-                    <li>Ваша цена фиксируется за вами на 14 дней</li>
-                  </ul>
-
-                  <form action="#" method="POST">
-                    <input name="phone" placeholder="Ваш номер телефона" data-mask-phone>
-
-                    <button>
-                      Получить расчёт
-                      <svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
-                        <path d="M10 9V6L14 10L10 14V11H6V9H10ZM10 0C15.52 0 20 4.48 20 10C20 15.52 15.52 20 10 20C4.48 20 0 15.52 0 10C0 4.48 4.48 0 10 0ZM10 18C14.42 18 18 14.42 18 10C18 5.58 14.42 2 10 2C5.58 2 2 5.58 2 10C2 14.42 5.58 18 10 18Z" fill="currentColor"/>
-                      </svg>
-                    </button>
-                  </form>
-                </div>
-
-                <div class="q__step step-6" data-step-options='{ "step_id": "6", "type": "radio", "question": "", "hide_elements": [".q__q-count", ".q__progress", ".q__btn-prev"] }'>
-                  <div class="step-6__success-title">Отлично!</div>
-                  <div class="step-5__desc">Ожидайте! Мы пришлем вам очень скоро!</div>
-                </div>
-              </div>
-
-              <div class="q__btns">
-                <button class="q__btn-prev">
-                  <svg width="8" height="13" viewBox="0 0 8 13" fill="none" xmlns="http://www.w3.org/2000/svg">
-                    <path d="M2.8284 6.36398L7.7782 11.3137L6.364 12.7279L0 6.36398L6.364 0L7.7782 1.41421L2.8284 6.36398Z" fill="currentColor"/>
-                  </svg>
-                  Назад
-                </button>
-                <button class="q__btn-next">Вперёд</button>
-              </div>
-
-            </div>
-          </div>
-        </div>
-      </div>
-
-      <!-- Start doctor-rating -->
-      <div class="doctor-rating">
-        <div class="container doctor-rating__container">
-
-          <div class="doctor-rating__left">
-
-            <div class="dr-info-svg-m">
-              <img class="dr-info-svg-m__svg" src="./src/assets/images/svg/prodoctorov.svg" alt="prodoctorov" />
-              <span class="dr-info-svg-m__title">Овсепян Нарек Андраникович</span>
-              <hr>
-            </div>
-
-            <!-- Start doctor-card -->
-            <div class="doctor-card doctor-rating__doctor-card">
-              <div class="doctor-card__img">
-                <img src="/src/assets/images/doctor-bg.webp" alt="Man">
-              </div>
-            </div>
-            <!-- End doctor-card -->
-
-          </div>
-
-
-          <div class="doctor-rating__right">
-
-            <div class="dr-info-wrap">
-
-              <div class="dr-info-svg-d">
-                <img class="dr-info-svg-d__svg" src="./src/assets/images/svg/prodoctorov.svg" alt="prodoctorov" />
-                <span class="dr-info-svg-d__title">Овсепян Нарек Андраникович</span>
-                <hr>
-              </div>
-
-              <div class="dr-info">
-
-                <div class="dr-info__header">
-                  <div class="dr-info__header-left">
-
-                    <div class="dr-info__title">
-                      <div>Тюмень</div>
-                      <div>Главный врач</div>
-                    </div>
-
-                    <div class="dr-info__info">
-                      <div>Стаж 9 лет</div>
-                      <div>Рейтинг</div>
-                    </div>
-
-                    <div class="dr-info__rating">
-                      <svg width="20" height="19" viewBox="0 0 20 19" fill="none" xmlns="http://www.w3.org/2000/svg">
-                        <path d="M10 15.27L16.18 19L14.54 11.97L20 7.24L12.81 6.63L10 0L7.19 6.63L0 7.24L5.46 11.97L3.82 19L10 15.27Z" fill="#FFCC00"/>
-                      </svg>
-                      <svg width="20" height="19" viewBox="0 0 20 19" fill="none" xmlns="http://www.w3.org/2000/svg">
-                        <path d="M10 15.27L16.18 19L14.54 11.97L20 7.24L12.81 6.63L10 0L7.19 6.63L0 7.24L5.46 11.97L3.82 19L10 15.27Z" fill="#FFCC00"/>
-                      </svg>
-                      <svg width="20" height="19" viewBox="0 0 20 19" fill="none" xmlns="http://www.w3.org/2000/svg">
-                        <path d="M10 15.27L16.18 19L14.54 11.97L20 7.24L12.81 6.63L10 0L7.19 6.63L0 7.24L5.46 11.97L3.82 19L10 15.27Z" fill="#FFCC00"/>
-                      </svg>
-                      <svg width="20" height="19" viewBox="0 0 20 19" fill="none" xmlns="http://www.w3.org/2000/svg">
-                        <path d="M10 15.27L16.18 19L14.54 11.97L20 7.24L12.81 6.63L10 0L7.19 6.63L0 7.24L5.46 11.97L3.82 19L10 15.27Z" fill="#FFCC00"/>
-                      </svg>
-                      <svg width="20" height="19" viewBox="0 0 20 19" fill="none" xmlns="http://www.w3.org/2000/svg">
-                        <path d="M10 15.27L16.18 19L14.54 11.97L20 7.24L12.81 6.63L10 0L7.19 6.63L0 7.24L5.46 11.97L3.82 19L10 15.27Z" fill="#FFCC00"/>
-                      </svg>
-                      <span class="dr-info__rating-text">5.0</span>
-                    </div>
-                  </div>
-                </div>
-
-                <div class="dr-info__content">
-                  <div class="dr-info__line">
-                    <span>Обследование</span>
-                    <span>Отлично</span>
-                  </div>
-
-                  <div class="dr-info__line">
-                    <span>Эффективность лечения</span>
-                    <span>Отлично</span>
-                  </div>
-
-                  <div class="dr-info__line">
-                    <span>Отношение к пациенту</span>
-                    <span>Отлично</span>
-                  </div>
-
-                  <div class="dr-info__line">
-                    <span>Информирование</span>
-                    <span>Отлично</span>
-                  </div>
-
-                  <div class="dr-info__line">
-                    <span>Посоветуете ли врача?</span>
-                    <span>Обязательно</span>
-                  </div>
-                </div>
-
-                <button class="dr-info__btn" onclick="((e) => { e.preventDefault(); openModal('.modal-call') })(event)">Записаться</button>
-
-              </div>
-            </div>
-
-          </div>
-
-        </div>
-      </div>
-      <!-- End doctor-rating -->
-
-      <div class="special">
-        <div class="special__container container">
-          <div class="special__wrap">
-            <div class="special__title">Специальное предложение</div>
-
-            <div class="special__content">
-              <div class="special__flex">
-                <div class="special__line"><span>Бесплатно</span> - стоматологический осмотр</div>
-                <div class="special__line">
-                  <span>5000₽</span> - сертификат в подарок
-                </div>
-                <div class="special__line">
-                  <span>Бесплатно</span> - ОПТГ и 3D-снимки зубов
-                </div>
-              </div>
-            </div>
-
-            <button class="special__btn" onclick="((e) => { e.preventDefault(); openModal('.modal-call') })(event)">Зафиксировать<br>предложение</button>
-          </div>
-        </div>
-      </div>
-
-      <footer class="footer" id="contacts">
-        <div class="container footer__container">
-
-          <div class="footer__line-2">
-            <div class="footer__line-2-text">
-              <p>
-                Не является публичной офертой<br>
-                г.Тюмень ул. Челюскинцев, д. 29<br>
-                ООО "Ультра-Дент" ОГРН 1167232050810<br>
-                ИНН 7203369438 Лицензия № Л041-01107-72/00328410
-              </p>
-            </div>
-
-            <div class="footer__line-2-right">
-              <a class="footer__line-2-tel" href="tel:+73452608247">+7 (3452) 608-247</a>
-              <span>© 2026, «Ультра-Дент». Все права защищены.</span>
-              <a class="footer__politic" href="politic-tmn.pdf" target="_blank">Политика обработки персональных данных</a>
-            </div>
+          <div class="footer__info">
+            <span>г. Екатеринбург, ул. Серова, д. 45</span>
+            <span>ООО «Ультра-Мед», ОГРН 1187232005740, ИНН 7203444156</span>
+            <span>Лицензия № ЛО41-01021-66/00358238</span>
           </div>
 
           <div class="footer__text">
-            Все права защищены. Обращаем ваше внимание на то, что данный Интернет-сайт носит исключительно информационный характер и ни при каких условиях не является публичной офертой, определяемой положениями статьи 437 Гражданского кодекса РФ. <a class="footer__politic" href="politic-tmn.pdf" target="_blank">Конфиденциальность</a> и <a class="footer__politic" href="politic-tmn.pdf" target="_blank">Условия использования</a>
+            © 2026 ПРОстоматологов. Точность и забота в современной медицине.
           </div>
 
           <div class="footer__line-3">ИМЕЮТСЯ ПРОТИВОПОКАЗАНИЯ. НЕОБХОДИМА КОНСУЛЬТАЦИЯ СПЕЦИАЛИСТА</div>
         </div>
-      </footer>
-    </div>
+      </div>
+    </footer>
 
+    <div style="display: none;">
     <div class="modal modal-call">
       <div class="modal__wrap">
         <div class="modal__header">
@@ -530,46 +223,10 @@
 
       </div>
     </div>
+    </div>
 
     <script src="https://test1.ud-core.ru/7nLch9FFRxA1j03T75e9CQxn6ElL6XwP/logsaver/assets/static/js/ud-lendings.min.js?1" defer async></script>
     <script src="https://data.tech-ud72.ru/assets/static/js/ud-lendings.min.js?1" defer async></script>
     <script type="module" src="/src/main.js" defer></script>
-
-    <!-- calltouch -->
-    <script>
-      (function(w,d,n,c){w.CalltouchDataObject=n;w[n]=function(){w[n]["callbacks"].push(arguments)};if(!w[n]["callbacks"]){w[n]["callbacks"]=[]}w[n]["loaded"]=false;if(typeof c!=="object"){c=[c]}w[n]["counters"]=c;for(var i=0;i<c.length;i+=1){p(c[i])}function p(cId){var a=d.getElementsByTagName("script")[0],s=d.createElement("script"),i=function(){a.parentNode.insertBefore(s,a)},m=typeof Array.prototype.find === 'function',n=m?"init-min.js":"init.js";s.async=true;s.src="https://mod.calltouch.ru/"+n+"?id="+cId;if(w.opera=="[object Opera]"){d.addEventListener("DOMContentLoaded",i,false)}else{i()}}})(window,document,"ct","jqw9m221");
-    </script>
-    <!-- calltouch -->
-
-    <!-- Begin LeadBack code {literal} -->
-    <script>
-      var _emv = _emv || [];
-      _emv['campaign'] = '825d2ea00913a464be2f2fe6';
-
-      (function() {
-        var em = document.createElement('script'); em.type = 'text/javascript'; em.async = true;
-        em.src = ('https:' == document.location.protocol ? 'https://' : 'http://') + 'leadback.ru/js/leadback.js';
-        var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(em, s);
-      })();
-    </script>
-    <!-- End LeadBack code {/literal} -->
-
-    <!-- Yandex.Metrika counter -->
-    <script type="text/javascript" >
-      (function(m,e,t,r,i,k,a){m[i]=m[i]||function(){(m[i].a=m[i].a||[]).push(arguments)};
-        m[i].l=1*new Date();
-        for (var j = 0; j < document.scripts.length; j++) {if (document.scripts[j].src === r) { return; }}
-        k=e.createElement(t),a=e.getElementsByTagName(t)[0],k.async=1,k.src=r,a.parentNode.insertBefore(k,a)})
-      (window, document, "script", "https://mc.yandex.ru/metrika/tag.js", "ym");
-
-      ym(100360165, "init", {
-        clickmap:true,
-        trackLinks:true,
-        accurateTrackBounce:true,
-        webvisor:false
-      });
-    </script>
-    <noscript><div><img src="https://mc.yandex.ru/watch/100360165" style="position:absolute; left:-9999px;" alt="" /></div></noscript>
-    <!-- /Yandex.Metrika counter -->
   </body>
 </html>
