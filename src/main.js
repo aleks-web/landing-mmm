@@ -5,6 +5,7 @@ import "./scss/index.scss";
 import "./assets/js/masks.js";
 import "./assets/js/last-day.js";
 import "./assets/js/components/select.js";
+import "./assets/js/components/agree.js";
 
 document.addEventListener('DOMContentLoaded', () => {
 
