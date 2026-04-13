@@ -6,6 +6,7 @@ export const doctors = [
         procedures: '1 850',
         clients: '520',
         avatar: '/modals/man-0.webp',
+        selectId: ['orto'],
         modal: {
             post: 'Стоматолог-ортопед',
             stage: '5 лет',
@@ -47,6 +48,7 @@ export const doctors = [
         procedures: '1 850',
         clients: '520',
         avatar: '/modals/man-1.webp',
+        selectId: ['orto'],
         modal: {
             post: 'Стоматолог-ортопед',
             stage: '35 лет',
@@ -93,6 +95,7 @@ export const doctors = [
         procedures: '1 850',
         clients: '520',
         avatar: '/modals/man-2.webp',
+        selectId: ['orto'],
         modal: {
             post: 'Стоматолог-ортопед, стоматолог',
             stage: '14 лет',
@@ -139,6 +142,7 @@ export const doctors = [
         procedures: '1 850',
         clients: '520',
         avatar: '/modals/man-3.webp',
+        selectId: ['full'],
         modal: {
             post: 'Стоматолог-имплантолог, стоматолог-хирург',
             stage: '12 лет',
@@ -207,6 +211,7 @@ export const doctors = [
         procedures: '1 850',
         clients: '520',
         avatar: '/modals/man-4.webp',
+        selectId: ['hir'],
         modal: {
             post: 'Стоматолог-имплантолог, стоматолог-хирург',
             stage: '15 лет',
@@ -390,6 +395,7 @@ export const doctors = [
         procedures: '1 850',
         clients: '520',
         avatar: '/modals/man-5.webp',
+        selectId: ['hir'],
         modal: {
             post: 'Стоматолог-хирург',
             stage: '8 лет',
@@ -450,6 +456,7 @@ export const doctors = [
         procedures: '1 850',
         clients: '520',
         avatar: '/modals/man-6.webp',
+        selectId: ['gigi'],
         modal: {
             post: 'Стоматолог-гигиенист',
             stage: '5 лет',
@@ -490,6 +497,7 @@ export const doctors = [
         procedures: '1 850',
         clients: '520',
         avatar: '/modals/man-7.webp',
+        selectId: ['gigi'],
         modal: {
             post: 'Стоматолог-гигиенист',
             stage: '6 лет',
@@ -530,6 +538,7 @@ export const doctors = [
         procedures: '1 850',
         clients: '520',
         avatar: '/modals/man-8.webp',
+        selectId: ['gigi'],
         modal: {
             post: 'Стоматолог-гигиенист',
             stage: '2 года',
@@ -570,6 +579,7 @@ export const doctors = [
         procedures: '1 850',
         clients: '520',
         avatar: '/modals/man-9.webp',
+        selectId: ['full'],
         modal: {
             post: 'Стоматолог',
             stage: '8 лет',
@@ -683,6 +693,7 @@ export const doctors = [
         procedures: '1 850',
         clients: '520',
         avatar: '/modals/man-10.webp',
+        selectId: ['full'],
         modal: {
             post: 'Стоматолог-эндодонтист',
             stage: '2 года',
@@ -849,6 +860,7 @@ export const doctors = [
         procedures: '1 850',
         clients: '520',
         avatar: '/modals/man-11.webp',
+        selectId: ['full'],
         modal: {
             post: 'Стоматолог',
             stage: '16 лет',
@@ -1024,8 +1036,6 @@ document.addEventListener('DOMContentLoaded', () => {
         return html;
     }
 
-
-
     document.querySelectorAll('[data-doctor-more]').forEach(el => {
 
         el.addEventListener('click', (e) => {
@@ -1047,6 +1057,8 @@ document.addEventListener('DOMContentLoaded', () => {
         if (!doctor) {
             throw new Error(`doctors[${index}] - отсутствует`);
         }
+
+        el.dataset.doc = JSON.stringify(doctor.selectId);
 
         const avatarImg = el.querySelector('.doctor__avatar img');
         avatarImg.setAttribute('src', doctor.avatar);
@@ -1070,5 +1082,13 @@ document.addEventListener('DOMContentLoaded', () => {
         content.innerText = doctor.modal.content;
     });
 
+
+    document.querySelectorAll('.doctor').forEach(doctor => {
+        const doctorBtn = doctor.querySelector('.doctor__btn-order');
+
+        doctorBtn.addEventListener('click', async () => {
+            await window.openModal('.modal-call');
+        });
+    });
 
 });

@@ -180,3 +180,27 @@
     }
   }
 }
+
+.modal-call {
+  .modal__wrap {
+    background-color: white;
+    border-radius: 20px;
+
+    @include utils.from('md') {
+      min-width: 600px;
+    }
+
+    @include utils.from('lg') {
+      min-width: 700px;
+    }
+
+    @include utils.from('xl') {
+      min-width: 900px;
+    }
+  }
+
+  .form-call__wrap {
+    box-shadow: unset;
+    padding: 0;
+  }
+}

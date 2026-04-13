@@ -72,7 +72,24 @@ document.addEventListener('DOMContentLoaded', (e) => {
 
 
     document.addEventListener('heroSelectChanged', (e) => {
-        // console.log(e.detail);
+        const id = e.detail.selectNode.querySelector('li.active').dataset.doc;
+        const doctors = document.querySelector('.doctors');
+
+        doctors.querySelectorAll('.doctor').forEach(el => {
+            const docData = el.dataset.doc;
+            const docDataArray = JSON.parse(docData);
+            el.style.display = 'none';
+
+            if(docDataArray.includes(id)) {
+                el.style.display = 'block';
+            }
+        });
+
+        document.querySelector('.doctors').scrollIntoView({
+            behavior: 'smooth',
+            block: 'start',
+            inline: 'nearest'
+        });
     });
 
 });
