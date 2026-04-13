@@ -72,7 +72,7 @@ document.addEventListener('DOMContentLoaded', (e) => {
 
 
     document.addEventListener('heroSelectChanged', (e) => {
-        console.log(e.detail);
+        // console.log(e.detail);
     });
 
 });

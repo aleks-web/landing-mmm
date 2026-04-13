@@ -130,8 +130,6 @@ export default class Modals {
 }
 
 document.addEventListener('DOMContentLoaded', () => {
-    Modals.init('.modal');
-
     Modals.beforeOpenModalGlobalCallback = (modal) => {
         const phoneEl = modal.querySelector('[data-mask-phone]');
         if (phoneEl) {
@@ -140,17 +138,58 @@ document.addEventListener('DOMContentLoaded', () => {
 
         modal.querySelectorAll('form.form').forEach(form => {
             const phone = form.querySelector('[data-mask-phone]');
-            let phoneValue = null;
+            const name = form.querySelector('[name="name"]');
+            const docName = form.querySelector('[name="doctor"]');
+
+            const inputAgree = form.querySelector('.agree [type="checkbox"]');
+            const btnSubmit = form.querySelector('button');
 
             form.onsubmit = async (e) => {
                 e.preventDefault();
-                modal.classList.add('modal-wrapper--loading');
-                phoneValue = clearPhone(phone.value);
-                sender({ phone: phoneValue });
+
+                const result = { phone: clearPhone(phone.value) };
+                if (name) { result.name = name; }
+                if (docName) { result.doctor = docName.value; }
+
+                try {
+                    sender(result);
+                    modal.classList.add('modal-wrapper--loading');
+                } catch (e) {
+                    modal.classList.remove('modal-wrapper--loading');
+                }
             }
 
+            function validateForm(e) {
+                if (phone.value && name.value && inputAgree.checked) {
+                    btnSubmit.classList.remove('disabled');
+                }
+            }
+
+            phone.addEventListener('input', validateForm);
+            name.addEventListener('input', validateForm);
+            inputAgree.addEventListener('input', validateForm);
+
         });
+
+        const svgPlay = modal.querySelector('.modal-doc-video__svg');
+        if (svgPlay) {
+            svgPlay.addEventListener('click', (e) => {
+                const vWrap = e.currentTarget.closest('.modal-doc-video__content');
+                const srcUrl = vWrap.dataset.video;
+                const videoHtml = `<video controls autoplay><source src="${srcUrl}" type="video/webm" /></video>`;
+                vWrap.innerHTML = videoHtml;
+            });
+        }
     }
+
+    Modals.init('.modal');
+
+    document.addEventListener('click', async (e) => {
+        const close = e.target.closest('.modal-doc__close');
+        if (close) {
+            await window.closeAllModals();
+        }
+    });
 
     window.openModal = async (modalSelector) => {
         const Modals = (await import('/src/assets/js/modals.js')).default;

@@ -1,20 +1,19 @@
 document.addEventListener('DOMContentLoaded', (e) => {
+    document.addEventListener('click', (e) => {
+        const ag = e.target.closest('.agree');
+        const input = ag?.querySelector('[type="checkbox"]');
 
-    document.querySelectorAll('.agree').forEach(agree => {
-        const input = agree.querySelector('[type="checkbox"]');
+        if (!ag) { return }
+        if (e.target.closest('a')) { return; }
 
-        agree.addEventListener('click', (e) => {
-            if (!e.target.closest('a')) {
-                if (input.checked) {
-                    input.checked = false;
-                    agree.classList.remove('active')
-                } else {
-                    input.checked = true;
-                    agree.classList.add('active');
-                }
-            }
-        });
+        if (input.checked) {
+            input.checked = false;
+            ag.classList.remove('active');
+        } else {
+            input.checked = true;
+            ag.classList.add('active');
+        }
 
+        input.dispatchEvent(new Event('input'));
     });
-
 });
