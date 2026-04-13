@@ -5,6 +5,7 @@ import "./assets/js/doctors.js";
 import "./scss/index.scss";
 import "./assets/js/components/select.js";
 import "./assets/js/components/agree.js";
+import sender from "./assets/js/sender.js";
 
 document.addEventListener('DOMContentLoaded', () => {
     document.addEventListener('fetchLeadSuccess', async (e) => {
@@ -14,10 +15,22 @@ document.addEventListener('DOMContentLoaded', () => {
             modal.classList.remove('modal-wrapper--loading');
             await closeAllModals();
             await openModal('.modal-success');
+        } else {
+            await openModal('.modal-success');
         }
 
         setTimeout(() => {
-            window.location.reload();
+            // window.location.reload();
         }, 3000);
     });
+
+
+
+    document.querySelector('.form-b form').onsubmit = (e) => {
+        e.preventDefault();
+        const phone = window.clearPhone(e.target.querySelector('[data-mask-phone]')?.value);
+        const result = { phone }
+
+        sender(result);
+    }
 });
