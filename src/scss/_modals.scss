@@ -201,6 +201,15 @@
 
   .form-call__wrap {
     box-shadow: unset;
+    background-color: white;
     padding: 0;
+  }
+
+  .form-call__field input {
+    box-shadow: 0 0 15px -15px black;
+  }
+
+  .form-call__field label {
+    margin-bottom: 10px;
   }
 }
