@@ -145,7 +145,7 @@ export const doctors = [
         procedures: '2 100',
         clients: '680',
         avatar: '/modals/man-3.webp',
-        selectId: ['full', 'all'],
+        selectId: ['hir', 'all'],
         modal: {
             post: 'Стоматолог-имплантолог, стоматолог-хирург',
             stage: '12 лет',
@@ -702,7 +702,7 @@ export const doctors = [
         procedures: '1 850',
         clients: '580',
         avatar: '/modals/man-10.webp',
-        selectId: ['hir', 'all'],
+        selectId: ['full', 'all'],
         modal: {
             post: 'Стоматолог-эндодонтист',
             stage: '2 года',
