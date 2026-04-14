@@ -160,14 +160,15 @@ document.addEventListener('DOMContentLoaded', () => {
             }
 
             function validateForm(e) {
-                if (phone.value && name.value && inputAgree.checked) {
+                const nameCheck = name?.value ? name?.value : true;
+                if (phone.value && nameCheck && inputAgree.checked) {
                     btnSubmit.classList.remove('disabled');
                 }
             }
 
-            phone.addEventListener('input', validateForm);
-            name.addEventListener('input', validateForm);
-            inputAgree.addEventListener('input', validateForm);
+            phone?.addEventListener('input', validateForm);
+            name?.addEventListener('input', validateForm);
+            inputAgree?.addEventListener('input', validateForm);
 
         });
 
