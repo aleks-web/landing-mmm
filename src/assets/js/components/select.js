@@ -72,8 +72,21 @@ document.addEventListener('DOMContentLoaded', (e) => {
 
 
     document.addEventListener('heroSelectChanged', (e) => {
-        const id = e.detail.selectNode.querySelector('li.active').dataset.doc;
+        const currentSelectPastEls = document.querySelectorAll('[data-select-current]');
+        const activeLi = e.detail.selectNode.querySelector('li.active');
+        const activeLiText = activeLi.innerText;
+        const id = activeLi.dataset.doc;
         const doctors = document.querySelector('.doctors');
+
+        currentSelectPastEls.forEach(el => {
+            if (id === 'all') {
+                el.innerText = 'Общий список стоматологов';
+                document.querySelector('.hero-utp__desc').style.display = 'none';
+            } else {
+                el.innerText = `Номинация «${activeLiText}»`;
+                document.querySelector('.hero-utp__desc').style.display = 'block';
+            }
+        });
 
         doctors.querySelectorAll('.doctor').forEach(el => {
             const docData = el.dataset.doc;

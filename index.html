@@ -42,12 +42,12 @@
                   <img class="hero-utp__img" src="./src/assets/images/hero-utp.webp" alt="hero-utp-image">
 
                   <div class="hero-utp__wrap">
-                    <h2 class="hero-utp__title">Номинация «Лучший ортопед»</h2>
-                    <div class="hero-utp__desc">по мнению независимого агентства экспертизы и консалтинга «МедЭкспертКонсалт»</div>
+                    <h2 class="hero-utp__title" data-select-current>Общий список стоматологов</h2>
+                    <div class="hero-utp__desc" style="display: none;">по мнению независимого агентства экспертизы и консалтинга «МедЭкспертКонсалт»</div>
 
                     <div class="hero-select hero-utp__select">
                       <div class="hero-select__current default">
-                        <span>Выбрать номинацию</span>
+                        <span>Общий список</span>
                         <svg width="12" height="7" viewBox="0 0 12 7" fill="none" xmlns="http://www.w3.org/2000/svg">
                           <path d="M0.833374 0.835938L5.83337 5.83594L10.8334 0.835938" stroke="#667085" stroke-width="1.66667" stroke-linecap="round" stroke-linejoin="round"/>
                         </svg>
@@ -58,6 +58,7 @@
                         <li data-doc="orto"><span>Лучший стоматолог-ортопед</span></li>
                         <li data-doc="gigi"><span>Лучший стоматолог-гигиенист</span></li>
                         <li data-doc="full"><span>Лучший стоматолог общей практики</span></li>
+                        <li data-doc="all" class="active"><span>Общий список</span></li>
                       </ul>
                     </div>
                   </div>
@@ -593,13 +594,13 @@
 
                 <div class="form-call__fields">
                   <div class="form-call__field">
-                    <label for="name">Полное имя</label>
-                    <input name="name" id="name" placeholder="Ваше имя и фамилия">
+                    <label>Полное имя</label>
+                    <input name="name" placeholder="Ваше имя и фамилия">
                   </div>
 
                   <div class="form-call__field">
-                    <label for="phone">Номер телефона</label>
-                    <input name="phone" id="phone" placeholder="Номер телефона" data-mask-phone="">
+                    <label>Номер телефона</label>
+                    <input name="phone" placeholder="Номер телефона" data-mask-phone="">
                   </div>
                 </div>
 
@@ -787,13 +788,13 @@
 
                     <div class="form-call__fields">
                       <div class="form-call__field">
-                        <label for="name">Полное имя</label>
-                        <input name="name" id="name" placeholder="Ваше имя и фамилия">
+                        <label>Полное имя</label>
+                        <input name="name" placeholder="Ваше имя и фамилия">
                       </div>
 
                       <div class="form-call__field">
-                        <label for="phone">Номер телефона</label>
-                        <input name="phone" id="phone" placeholder="Номер телефона" data-mask-phone>
+                        <label>Номер телефона</label>
+                        <input name="phone" placeholder="Номер телефона" data-mask-phone>
                       </div>
                     </div>
 
