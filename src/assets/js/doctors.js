@@ -978,6 +978,7 @@ document.addEventListener('DOMContentLoaded', () => {
             wrList.style.display = 'none';
         } else {
             wrList.innerHTML = wrHtml;
+            wrList.style.display = 'none'; // Скрываем блок полностью. Попросили
         }
 
         const edList = modal.querySelector('.modal-doc__education-list');
@@ -990,6 +991,7 @@ document.addEventListener('DOMContentLoaded', () => {
             edMoreBlock.style.display = 'none';
         } else {
             edMoreBlock.querySelector('.modal-doc__education-list').innerHTML = edMoreHtml;
+            edMoreBlock.style.display = 'flex';
         }
 
         name.innerText = doctor.name;
@@ -1048,7 +1050,6 @@ document.addEventListener('DOMContentLoaded', () => {
     }
 
     document.querySelectorAll('[data-doctor-more]').forEach(el => {
-
         el.addEventListener('click', (e) => {
             const index = e.currentTarget.dataset.doctorMore;
             const doctor = doctors[index];
@@ -1092,7 +1093,6 @@ document.addEventListener('DOMContentLoaded', () => {
         const content = el.querySelector('[data-content]');
         content.innerText = doctor.modal.content;
     });
-
 
     document.querySelectorAll('.doctor').forEach(doctor => {
         const doctorBtn = doctor.querySelector('.doctor__btn-order');
