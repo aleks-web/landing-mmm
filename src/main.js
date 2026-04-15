@@ -14,9 +14,9 @@ document.addEventListener('DOMContentLoaded', () => {
         if (modal) {
             modal.classList.remove('modal-wrapper--loading');
             await closeAllModals();
-            // window.location.href = '/success.html';
+            window.location.href = '/success.html';
         } else {
-            // window.location.href = '/success.html';
+            window.location.href = '/success.html';
         }
     });
 
