@@ -141,7 +141,7 @@ document.addEventListener('DOMContentLoaded', () => {
             const name = form.querySelector('[name="name"]');
             const docName = form.querySelector('[name="doctor"]');
 
-            const inputAgree = form.querySelector('.agree [type="checkbox"]');
+            // const inputAgree = form.querySelector('.agree [type="checkbox"]');
             const btnSubmit = form.querySelector('button');
 
             form.onsubmit = async (e) => {
@@ -163,14 +163,13 @@ document.addEventListener('DOMContentLoaded', () => {
 
             function validateForm(e) {
                 const nameCheck = name?.value ? name?.value : true;
-                if (phone.value && nameCheck && inputAgree.checked) {
+                if (phone.value && nameCheck) {
                     btnSubmit.classList.remove('disabled');
                 }
             }
 
             phone?.addEventListener('input', validateForm);
             name?.addEventListener('input', validateForm);
-            inputAgree?.addEventListener('input', validateForm);
         });
 
         const svgPlay = modal.querySelector('.modal-doc-video__svg');
