@@ -1099,6 +1099,12 @@ document.addEventListener('DOMContentLoaded', () => {
 
         doctorBtn.addEventListener('click', async () => {
             await window.openModal('.modal-call');
+            const doctorName = doctorBtn.closest('.doctor').querySelector('[data-name]').innerText;
+
+            const modals = document.querySelectorAll('.modal-call');
+            modals.forEach(el => {
+                el.querySelector('[name="doctor"]').value = doctorName;
+            });
         });
     });
 

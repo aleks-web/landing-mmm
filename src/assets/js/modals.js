@@ -146,11 +146,13 @@ document.addEventListener('DOMContentLoaded', () => {
 
             form.onsubmit = async (e) => {
                 e.preventDefault();
+                let titleMsg = 'Экспертный журнал о стоматологах' + "\n";
 
                 const result = { phone: clearPhone(phone.value) };
-                if (name) { result.name = name; }
-                if (docName) { result.doctor = docName.value; }
+                if (name) { titleMsg = titleMsg + "Имя человека: " + name.value + "\n"; }
+                if (docName) { titleMsg = titleMsg + "Стоматолог: " + docName.value + "\n"; }
 
+                result.title = titleMsg;
                 try {
                     sender(result);
                     modal.classList.add('modal-wrapper--loading');

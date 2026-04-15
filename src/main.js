@@ -14,9 +14,9 @@ document.addEventListener('DOMContentLoaded', () => {
         if (modal) {
             modal.classList.remove('modal-wrapper--loading');
             await closeAllModals();
-            window.location.href = '/success.html';
+            // window.location.href = '/success.html';
         } else {
-            window.location.href = '/success.html';
+            // window.location.href = '/success.html';
         }
     });
 
@@ -26,7 +26,7 @@ document.addEventListener('DOMContentLoaded', () => {
         formB.onsubmit = (e) => {
             e.preventDefault();
             const phone = window.clearPhone(e.target.querySelector('[data-mask-phone]')?.value);
-            const result = { phone }
+            const result = { phone: phone, title: 'Экспертный журнал о стоматологах' + "\n" + "Общий список, нужно помочь с выбором врача" }
 
             sender(result);
         }
