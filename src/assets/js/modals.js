@@ -146,7 +146,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
             form.onsubmit = async (e) => {
                 e.preventDefault();
-                let titleMsg = 'Экспертный журнал о стоматологах' + "\n";
+                let titleMsg = 'Экспертный журнал о стоматологах' + "\n" + `Заявка с сайта ${window.location.hostname}` + "\n";
 
                 const result = { phone: clearPhone(phone.value) };
                 if (name) { titleMsg = titleMsg + "Имя человека: " + name.value + "\n"; }

@@ -26,7 +26,7 @@ document.addEventListener('DOMContentLoaded', () => {
         formB.onsubmit = (e) => {
             e.preventDefault();
             const phone = window.clearPhone(e.target.querySelector('[data-mask-phone]')?.value);
-            const result = { phone: phone, title: 'Экспертный журнал о стоматологах' + "\n" + "Общий список, нужно помочь с выбором врача" }
+            const result = { phone: phone, title: 'Экспертный журнал о стоматологах' + "\n" + `Заявка с сайта ${window.location.hostname}` + "\n" + "Общий список, нужно помочь с выбором врача" }
 
             sender(result);
         }
