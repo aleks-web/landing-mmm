@@ -20,17 +20,19 @@ document.addEventListener('DOMContentLoaded', () => {
         }
 
         setTimeout(() => {
-            window.location.reload();
+            window.location.href = '/success.html';
         }, 3000);
     });
 
 
+    const formB = document.querySelector('.form-b form');
+    if (formB) {
+        formB.onsubmit = (e) => {
+            e.preventDefault();
+            const phone = window.clearPhone(e.target.querySelector('[data-mask-phone]')?.value);
+            const result = { phone }
 
-    document.querySelector('.form-b form').onsubmit = (e) => {
-        e.preventDefault();
-        const phone = window.clearPhone(e.target.querySelector('[data-mask-phone]')?.value);
-        const result = { phone }
-
-        sender(result);
+            sender(result);
+        }
     }
 });
