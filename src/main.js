@@ -14,14 +14,10 @@ document.addEventListener('DOMContentLoaded', () => {
         if (modal) {
             modal.classList.remove('modal-wrapper--loading');
             await closeAllModals();
-            await openModal('.modal-success');
-        } else {
-            await openModal('.modal-success');
-        }
-
-        setTimeout(() => {
             window.location.href = '/success.html';
-        }, 3000);
+        } else {
+            window.location.href = '/success.html';
+        }
     });
 
 
