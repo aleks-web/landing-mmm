@@ -169,7 +169,6 @@ document.addEventListener('DOMContentLoaded', () => {
             phone?.addEventListener('input', validateForm);
             name?.addEventListener('input', validateForm);
             inputAgree?.addEventListener('input', validateForm);
-
         });
 
         const svgPlay = modal.querySelector('.modal-doc-video__svg');
